@@ -1,0 +1,6 @@
+{
+  "apiBase": "http://localhost:55558",
+  "targetUrl": "https://pbl-llm.vercel.app",
+  "launchTokenEndpoint": "/api/launch-token",
+  "launchTokenQuery": "authrt_id"
+}

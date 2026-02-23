@@ -8,9 +8,11 @@ Vue 3 + Vite frontend for auto-login flow.
 - `npm run build`
 
 ## Setup
-- `cp .env.example .env`
-- 기본 API 주소: `VITE_API_BASE` (기본값 `http://localhost:55558`)
-- 서비스 새 창 URL: `VITE_TARGET_URL` (기본값 `http://localhost:54322`)
+- 프로젝트 루트의 `config.json`을 사용합니다.
+  - `apiBase`: `http://localhost:55558`
+  - `targetUrl`: `https://pbl-llm.vercel.app`
+  - `launchTokenEndpoint`: `/api/launch-token`
+  - `launchTokenQuery`: `authrt_id`
 
 ## Flow
 - `POST /api/login` → save `access_token` in localStorage and move to `/dashboard`
