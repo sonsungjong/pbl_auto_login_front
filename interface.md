@@ -7,7 +7,7 @@
 - 목적
   - 사용자 직접 로그인
   - 로그인 성공 시 자동로그인 토큰 발급 API 호출
-  - `targetUrl`로 새 창 열기(`authrt_id` 쿼리 전달)
+- `targetUrl`로 새 창 열기(`cntn_key` 전달, `#` 구분자 사용)
 
 ---
 
@@ -104,14 +104,14 @@
    ```json
    {
      "user_id": "lhj",
-     "authrt_id": 123456789,
+     "cntn_key": 123456789,
      "expires_in": 30
    }
-   ```
-4. `authrt_id`를 추출해 URL 구성
+    ```
+4. `cntn_key`를 추출해 URL 구성
    ```text
-   ${TARGET_URL}?${LAUNCH_TOKEN_QUERY}=<authrt_id>
-   # 예: https://pbl-llm.vercel.app?authrt_id=123456789
+   ${TARGET_URL}?${LAUNCH_TOKEN_QUERY}#<cntn_key>
+   # 예: https://pbl-llm.vercel.app?authrt_id#123456789
    ```
 5. `window.open(url, '_blank', 'noopener,noreferrer')`
 
@@ -166,7 +166,7 @@
 1. 백엔드가 `http://localhost:55558`(혹은 설정값)에서 정상 기동
 2. `POST /api/login` with `lhj/1234` 성공
 3. 대시보드 이동 후 `서비스 열기`
-4. `targetUrl`에 `?authrt_id=...` 형태의 쿼리 포함되어 새 창 오픈 확인
+4. `targetUrl`에 `?authrt_id#...` 형태의 URL이 새 창 오픈되는지 확인
 
 ---
 

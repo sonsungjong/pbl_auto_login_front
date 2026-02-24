@@ -22,7 +22,7 @@ Vue 3 + Vite frontend for auto-login flow.
 ## Interface Guide
 
 - 상세 문서: `interface.md`
-- 로그인 폼, 대시보드 서비스 열기 버튼, `authrt_id` 전달 규격, 로컬스토리지 키 동작을 정리했습니다.
+- 로그인 폼, 대시보드 서비스 열기 버튼, `cntn_key` 전달 규격, 로컬스토리지 키 동작을 정리했습니다.
 
 로그인 실패 시 백엔드가 `Unable to verify credentials.` 를 주면, 백엔드 `/health`를 먼저 확인하세요.
 
