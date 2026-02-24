@@ -1,6 +1,6 @@
 {
-  "apiBase": "http://61.106.153.250:55558",
-  "targetUrl": "https://pbl-llm.vercel.app",
+  "apiBase": "http://172.30.1.82:55558",
+  "targetUrl": "http://172.30.1.82:54322",
   "launchTokenEndpoint": "/api/launch-token",
-  "launchTokenQuery": "authrt_id"
+  "launchTokenQuery": "cntn_key"
 }
