@@ -52,12 +52,12 @@ async function openTargetApp() {
       throw new Error(data.message || '토큰 생성에 실패했습니다.');
     }
 
-    const cntnKey = String(data.cntn_key || data.authrt_id || '').trim();
+    const cntnKey = String(data.cntn_key || '').trim();
     if (!cntnKey) {
       throw new Error('서버에서 인증 키를 받지 못했습니다.');
     }
 
-    const url = `${TARGET_URL}?${LAUNCH_TOKEN_QUERY}#${encodeURIComponent(cntnKey)}`;
+    const url = `${TARGET_URL}?cntn_key=${encodeURIComponent(cntnKey)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   } catch (e) {
     error.value = e instanceof Error ? e.message : '알 수 없는 오류';
