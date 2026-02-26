@@ -52,6 +52,8 @@ async function onSubmit() {
 
     localStorage.setItem('token', data.access_token);
     localStorage.setItem('user', JSON.stringify(data.user));
+    sessionStorage.setItem('user', JSON.stringify(data.user));
+    sessionStorage.setItem('user_id', String(data.user?.user_id || '').trim());
     info.value = '로그인 성공';
     router.push('/dashboard');
   } catch (e) {
